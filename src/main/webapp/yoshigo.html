@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>시작페이지</title>
+<style type="text/css">
+@font-face{
+	font-family:'NeueMontrealB';/*폰트의 이름 지정*/
+	src:url('files/PPNeueMontreal-B.otf') format('opentype');
+}
+@font-face{
+	font-family:'NeueMontrealM';/*폰트의 이름 지정*/
+	src:url('files/PPNeueMontreal-M.otf') format('opentype');
+}
+@font-face{
+	font-family:'NeueMontreal';/*폰트의 이름 지정*/
+	src:url('files/PPNeueMontreal.otf') format('opentype');
+}
+body{
+	background-color: rgb(254, 253, 231);
+	margin:0px;
+	font-family:'NeueMontrealM', serif;
+}	
+#nav_div{
+	display:flex;
+	justify-content: space-between;
+	/* border-bottom : 1px solid rgba(52,92,64,0.3); */
+  	margin-left:20px;
+    margin-right:20px;
+    position:sticky;
+    top:0px;
+    background-color: rgb(254, 253, 231);
+    z-index:9999;
+}
+#main_nav{
+    display : flex;
+  	align-items : center;
+}
+#nav_div > a{
+	text-decoration: none;
+	color: black;
+	font-size:38px;
+	z-index:1000;
+	font-family:'NeueMontrealM', serif;
+	display : flex;
+  	align-items : center;
+    height:110px;
+}
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+.li1 a{
+	text-decoration: none;
+	color: black;
+	font-family:'NeueMontreal', serif;
+	display : flex;
+  	align-items : center;
+  	margin-right:25px;
+  	font-size:20px;
+}
+.li1 a:hover{
+	text-decoration: underline;
+	text-decoration-color: rgb(41, 21, 244);
+}
+
+#under{
+	text-decoration: underline;
+	text-decoration-color: rgb(41, 21, 244);
+}
+#first{
+	position: relative;
+	margin:300px 100px 0px 100px;
+	height:1000px;
+	text-align:center;
+	border-bottom:1px solid rgba(0,0,0,0.3);
+	transform: translateY(-100px); 
+	opacity: 1; 
+	transition: all 1.5s;
+}
+#first.ani{
+	opacity: 0; 
+	transform: translateY(0);
+}
+figure{
+  	 height: 800px;
+  	 margin: auto;
+}
+picture img{
+	 width: 40%;
+	 height: 100%;
+	 object-fit: cover;
+	 border-radius: 48% 48% 0% 0%;
+	 margin-top:20px;
+}
+span{
+	position:absolute;
+	top:0%;
+	left:50%;
+	width:100%;
+	transform:translate(-50%, -50%);
+	font-size:100px;
+	text-align:center;
+	font-family:'NeueMontreal', serif;
+	text-decoration: underline;
+	text-decoration-color: rgb(0,0,0);
+}
+#second{
+	position: relative;
+	margin:50px 100px 100px 100px;
+	text-align:center;
+}
+#second > p{
+	font-size:60px;
+	margin-bottom:150px;
+}
+#second > img{
+	display:block;
+	margin: 40px auto;
+	max-width:1000px;
+}
+</style>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$("body").on("mousewheel", function (e) {
+  var wheel = e.originalEvent.wheelDelta;
+  if (wheel > 0) {
+    $("#first.ani").removeClass("ani");
+  } else {
+    $("#first").addClass("ani");
+  }
+});
+</script>
+<div id='nav_div'>
+	<a href="index.html">OPE:</a>
+	<nav id='main_nav'>
+		<ul>
+		  <li class="li1"><a href="index.html">about</a></li>
+	      <li class="li1"><a href="#" id='under'>Yoshigo</a></li>
+	      <li class="li1"><a href="francofontana.html">Franco Fontana</a></li>
+	      <li class="li1"><a href="vivianmaier.html">Vivian Maier</a></li>
+	      <li class="li1"><a href="mariasvarbova.html">Maria svarbova</a></li>
+	    </ul>
+	</nav>
+</div>
+<div id="first">
+	<figure>
+		<span>YOSHIGO</span>
+		<picture>
+			<img src="files/yoshigo.png">			
+		</picture>
+	</figure>
+</div>
+<div id="second">
+	<p>"Holiday Memory"</p>
+	<img src="files/yoshigo(1).jpeg">
+	<img src="files/yoshigo(2).jpeg">
+	<img src="files/yoshigo(3).jpeg">
+	<img src="files/yoshigo(4).jpeg">
+	<img src="files/yoshigo(5).jpeg">
+	<img src="files/yoshigo(6).jpeg">
+	<img src="files/yoshigo(7).png">
+	<img src="files/yoshigo(8).png">
+</div>
+</body>
+</html>
